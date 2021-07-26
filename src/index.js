@@ -10,6 +10,8 @@ app.use(express.json());
 app.use(userRouter);
 app.use(dataRouter);
 
+app.use("/uploads", express.static("uploads"));
+
 app.listen(port, () => {
   console.log("Server is up on port " + port);
 });
